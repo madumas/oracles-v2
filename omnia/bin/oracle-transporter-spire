@@ -7,31 +7,34 @@ set -x
 case "$_command" in
 	publish)
 		_v=$(seth --to-word "0x$(jq -r '.signature[128:130]' <<<"$2")")
-		_msg=$(jq --arg v $_v '{
+		_msg=$(jq '{
 			price: {
-				wat: .type,
-				val: .price,
+				wat: (.type | ascii_downcase),
+				val: (.price * 1000000000000000000 | round | tostring),
 				age: .time,
-				v: .signature[128:130],
 				r: .signature[0:64],
-				s: .signature[64:128]
+				s: .signature[64:128],
+				v: .signature[128:130]
 			},
 			trace: .sources
 		}' <<<"$2")
-		spire push --config "$SPIRE_CONFIG" price <<<"$_msg"
+		spire push -c "$SPIRE_CONFIG" price <<<"$_msg"
 		;;
 	pull)
 		_assetPair="$3"
 		_assetPair=${_assetPair/\/}
-		_assetPair=${_assetPair^^}
-		spire pull --config "$SPIRE_CONFIG" price "$2" "$_assetPair" | jq -s --arg pair "$_assetPair" '
-		[.[]|select(.wat == $pair)][0]
-		| {
-			type: .wat,
-			price: .price,
-			time: .age
-		}
-	';;
+		_assetPair=${_assetPair,,}
+		_msgs=$(spire pull -c "$SPIRE_CONFIG" prices "$_assetPair") || exit $?
+		echo "$_msgs" | jq -s --arg pair "$_assetPair" '
+			[.[].price][0]
+			| {
+				type: .wat,
+				price: .val,
+				time: .age,
+				signature: (.r + .s + .v)
+			}
+		'
+		;;
 # TODO: when using `spire get-prices` we get all latest messages for a given pair
 # TODO: we need to filter it to get only a single one for a specific author
 esac

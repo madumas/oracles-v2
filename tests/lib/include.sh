@@ -103,13 +103,20 @@ startSSB() {
   sleep 3
 }
 
+spirePublishMessages() {
+  while IFS= read -r msg; do
+    HOME="$E2E_HOME" \
+      spire -c "$SPIRE_CONFIG" push price <<<"$msg"
+  done < <(cat)
+}
+
 startLibp2p() {
   echo >&2 "# Start libp2p server"
   HOME="$E2E_HOME" \
-    spire agent >"$E2E_LOGS/${E2E_TARGET-test}-spire.out" 2>&1 &
+    spire -v debug -c "$SPIRE_CONFIG" agent  >"$E2E_LOGS/${E2E_TARGET-test}-spire.out" 2>&1 &
   E2E_EXIT_HOOK+='pkill spire;'
 
-  sleep 3
+  sleep 15
 }
 
 startGeth() {

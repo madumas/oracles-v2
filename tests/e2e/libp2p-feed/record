@@ -10,5 +10,5 @@ output=$(mktemp)
 "$_path/run" >"$output"
 
 if "$_path/test" "$output"; then
-  cp "$output" "$_path/ssb-messages.json"
+  cp "$output" "$_path/spire-messages.json"
 fi
