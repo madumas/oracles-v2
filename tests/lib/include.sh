@@ -103,6 +103,15 @@ startSSB() {
   sleep 3
 }
 
+startLibp2p() {
+  echo >&2 "# Start libp2p server"
+  HOME="$E2E_HOME" \
+    spire agent >"$E2E_LOGS/${E2E_TARGET-test}-spire.out" 2>&1 &
+  E2E_EXIT_HOOK+='pkill spire;'
+
+  sleep 3
+}
+
 startGeth() {
   local _path=$(cd "${BASH_SOURCE[0]%/*}"; pwd)
   echo >&2 "# Start Geth testnet"

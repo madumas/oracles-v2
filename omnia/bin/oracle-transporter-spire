@@ -5,12 +5,26 @@ _here=$(cd "${BASH_SOURCE[0]%/*}" && pwd)
 _command="$1"
 set -x
 case "$_command" in
-	publish) spire broadcast-price <<<"$2";;
+	publish)
+		_v=$(seth --to-word "0x$(jq -r '.signature[128:130]' <<<"$2")")
+		_msg=$(jq --arg v $_v '{
+			price: {
+				wat: .type,
+				val: .price,
+				age: .time,
+				v: .signature[128:130],
+				r: .signature[0:64],
+				s: .signature[64:128]
+			},
+			trace: .sources
+		}' <<<"$2")
+		spire push --config "$SPIRE_CONFIG" price <<<"$_msg"
+		;;
 	pull)
 		_assetPair="$3"
 		_assetPair=${_assetPair/\/}
 		_assetPair=${_assetPair^^}
-		spire get-prices "$_assetPair" | jq -s --arg pair "$_assetPair" '
+		spire pull --config "$SPIRE_CONFIG" price "$2" "$_assetPair" | jq -s --arg pair "$_assetPair" '
 		[.[]|select(.wat == $pair)][0]
 		| {
 			type: .wat,
