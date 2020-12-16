@@ -2,8 +2,7 @@
   "ethereum": {
     "from": "0x1f8fbe73820765677e68eb6e933dcb3c94c9b708",
     "keystore": "../../resources/keys",
-    "password": "",
-    "rpc": "https://kovan.infura.io/v3/bfe01745653c4443a6eff182a543be21"
+    "password": ""
   },
   "p2p": {
     "bootstrapAddrs": [ ]
@@ -14,5 +13,5 @@
   "feeds": [
     "0x1f8fbe73820765677e68eb6e933dcb3c94c9b708"
   ],
-  "pairs": ["balusd", "zrxusd"]
+  "pairs": ["BALUSD", "ZRXUSD"]
 }

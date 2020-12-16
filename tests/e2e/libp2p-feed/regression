@@ -9,7 +9,7 @@ mapfile -t symbols < <(jq -r '.pairs[]' "$_path/spire.json")
 
 plan $((${#symbols[@]} * 2))
 
-note <<<"Spire Transport Regression Assertions"
+note <<<"Feed with Spire Transport Regression Assertions"
 
 for symbol in "${symbols[@]}"; do
   jqfs="$jqf|select(.wat == \"$symbol\")"
