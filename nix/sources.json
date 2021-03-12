@@ -5,10 +5,10 @@
         "homepage": "https://dapp.tools",
         "owner": "dapphub",
         "repo": "dapptools",
-        "rev": "78508c6a8db2d6d3e8e09437dbe122bb5e6b2e7e",
-        "sha256": "18b631l9lhn5643anqdpkmaiqryhxl6krjlhgxhl2isyvjrywln8",
+        "rev": "ab4db322d4b53fade5991c020b6a7dcbc8072cd0",
+        "sha256": "126wskjp25qp5k3hpvip2kwvx5hihc2i6f3ynh2jh00iladk1vmj",
         "type": "tarball",
-        "url": "https://github.com/dapphub/dapptools/archive/78508c6a8db2d6d3e8e09437dbe122bb5e6b2e7e.tar.gz",
+        "url": "https://github.com/dapphub/dapptools/archive/ab4db322d4b53fade5991c020b6a7dcbc8072cd0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "mach-nix": {
@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "DavHau",
         "repo": "mach-nix",
-        "rev": "3.1.1",
-        "sha256": "06bxmz7x1fnjx2d0gb63fdm0jci2mcdnpa3isbhjr92z1l2a7hl1",
+        "rev": "ac62255e8112e547432ca0f09bfe8f4d1920fbb8",
+        "sha256": "0qhg36l3c1i6p0p2l346fpj9zsh5kl0xpjmyasi1qcn7mbdfjb0m",
         "type": "tarball",
-        "url": "https://github.com/DavHau/mach-nix/archive/3.1.1.tar.gz",
+        "url": "https://github.com/DavHau/mach-nix/archive/ac62255e8112e547432ca0f09bfe8f4d1920fbb8.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "makerpkgs": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "makerdao",
         "repo": "makerpkgs",
-        "rev": "0cdc0e74ca1b4c2548d4eb36784ded03b416e8a6",
-        "sha256": "0f58fcn12vmr0l9c151fpymx7y489943gmb5sq5xwn3m5wk33hqs",
+        "rev": "76151418a2d9ffcfa55dec8acda5bde10f504224",
+        "sha256": "0vknhf3n54v6rgvq23rhi3b3lraczn9yzd7cw8i1hdxkb028f34r",
         "type": "tarball",
-        "url": "https://github.com/makerdao/makerpkgs/archive/0cdc0e74ca1b4c2548d4eb36784ded03b416e8a6.tar.gz",
+        "url": "https://github.com/makerdao/makerpkgs/archive/76151418a2d9ffcfa55dec8acda5bde10f504224.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -41,10 +41,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "9d35b9e4837ab88517210b1701127612c260eccf",
-        "sha256": "0q50xhnm8g2yfyakrh0nly4swyygxpi0a8cb9gp65wcakcgvzvdh",
+        "rev": "af958e8057f345ee1aca714c1247ef3ba1c15f5e",
+        "sha256": "1qjavxabbrsh73yck5dcq8jggvh3r2jkbr6b5nlz5d9yrqm9255n",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/9d35b9e4837ab88517210b1701127612c260eccf.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/af958e8057f345ee1aca714c1247ef3ba1c15f5e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -53,10 +53,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "89281dd1dfed6839610f0ccad0c0e493606168fe",
-        "sha256": "14jwgdqbhxf9581z9afzjzj0r0maw3m7227gn5bpk4fn8057vs5s",
+        "rev": "c5147860e23ed75ce9d40298c66b416c00be1167",
+        "sha256": "104mw4rfbzyrfkxq468dlk38drrjx92dgyvkazgci67a6cx3n6nx",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/89281dd1dfed6839610f0ccad0c0e493606168fe.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/c5147860e23ed75ce9d40298c66b416c00be1167.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs-dapptools": {
@@ -65,10 +65,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f1707d8875276cfa110139435a7e8998b4c2a4fd",
-        "sha256": "14p7qvn3z58asx5naa2l5hvp1fddi186h385f7cj2ciw4pknrj9m",
+        "rev": "c5147860e23ed75ce9d40298c66b416c00be1167",
+        "sha256": "104mw4rfbzyrfkxq468dlk38drrjx92dgyvkazgci67a6cx3n6nx",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/f1707d8875276cfa110139435a7e8998b4c2a4fd.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/c5147860e23ed75ce9d40298c66b416c00be1167.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "setzer-mcd": {
