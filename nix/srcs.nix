@@ -32,15 +32,15 @@ rec {
 
   ssb-server = nodepkgs.ssb-server.override {
     buildInputs = with pkgs; [ gnumake nodepkgs.node-gyp-build nodepkgs.patch-package ];
-    name = "ssb-server-${nodepkgs.ssb-server.version}-patched";
-    preBuild = ''
-      sed -i -e 's/"ssb-db": "\^20\.0\.1",/"ssb-db": "20.0.1",/g' ./package.json
-    '';
-    postInstall = ''
-      mkdir -p ./patches
-      cp ${ssbServerPatches}/*.patch ./patches
-      patch-package
-    '';
+#    name = "ssb-server-${nodepkgs.ssb-server.version}-patched";
+#    preBuild = ''
+#      sed -i -e 's/"ssb-db": "\^20\.0\.1",/"ssb-db": "20.0.1",/g' ./package.json
+#    '';
+#    postInstall = ''
+#      mkdir -p ./patches
+#      cp ${ssbServerPatches}/*.patch ./patches
+#      patch-package
+#    '';
   };
 
   setzer-mcd = makerpkgs.callPackage sources.setzer-mcd {};
