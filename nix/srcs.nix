@@ -32,7 +32,7 @@ rec {
 
   ssb-server = nodepkgs.ssb-server.override {
     buildInputs = with pkgs; [ gnumake nodepkgs.node-gyp-build nodepkgs.patch-package ];
-    name = "${nodepkgs.ssb-server.name}-maker-patch";
+    name = "${nodepkgs.ssb-server.name}-patched";
     preBuild = ''
       sed -i -e 's/"ssb-db": "\^20\.0\.1",/"ssb-db": "20.0.1",/g' ./package.json
     '';
