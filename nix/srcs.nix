@@ -12,7 +12,6 @@ let
       else x.pname or (parse x.name);
 
   sources = import ./sources.nix;
-  ssbServerPatches = ../ssb-server/patches;
 in
 
 rec {
