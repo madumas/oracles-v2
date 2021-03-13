@@ -55,14 +55,14 @@ time2Hex () {
 }
 
 getMsgExpiration () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _msgExpiration
 	_msgExpiration=$(cut -d ',' -f1 <<<"${assetInfo[$_assetPair]}")
 	echo "$_msgExpiration"
 }
 
 getMsgSpread () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _msgSpread
 	[[ $OMNIA_MODE == "FEED" ]] && _msgSpread=$(cut -d ',' -f2 <<<"${assetInfo[$_assetPair]}")
 	echo "$_msgSpread"
@@ -70,21 +70,21 @@ getMsgSpread () {
 
 #get the Oracle contract of an asset pair
 getOracleContract () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _address
 	[[ $OMNIA_MODE == "RELAYER" ]] && _address=$(cut -d ',' -f2 <<<"${assetInfo[$_assetPair]}")
 	echo "$_address"
 }
 
 getOracleExpiration () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _oracleExpiration
 	[[ "$OMNIA_MODE" == "RELAYER" ]] && _oracleExpiration=$(cut -d ',' -f3 <<<"${assetInfo[$_assetPair]}")
 	echo "$_oracleExpiration"
 }
 
 getOracleSpread () { 
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _oracleSpread
 	[[ "$OMNIA_MODE" == "RELAYER" ]] && _oracleSpread=$(cut -d ',' -f4 <<<"${assetInfo[$_assetPair]}")
 	echo "$_oracleSpread"

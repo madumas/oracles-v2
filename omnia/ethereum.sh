@@ -12,7 +12,7 @@ pullOracleTime () {
 }
 
 pullOracleQuorum () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _address
 	_address=$(getOracleContract "$_assetPair")
 	if ! [[ "$_address" =~ ^(0x){1}[0-9a-fA-F]{40}$ ]]; then

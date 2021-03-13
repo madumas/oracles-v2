@@ -2,6 +2,7 @@
 
 updateOracle () {
     for assetPair in "${assetPairs[@]}"; do
+    	  assetPair="${assetPair/\/}"
         local _quorum
         local _prices
         local _median
