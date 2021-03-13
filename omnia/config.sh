@@ -148,6 +148,7 @@ importAssetPairsFeed () {
 
 	#Verify values
 	for assetPair in "${!assetInfo[@]}"; do
+		assetPair="${assetPair/\/}"
 		_msgExpiration=$(getMsgExpiration "$assetPair")
 		[[ "$_msgExpiration" =~ ^[1-9][0-9]*$ ]] || errors+=("Error - Asset Pair param $assetPair has invalid or missing msgExpiration field, must be positive integer.")
 		
@@ -165,10 +166,12 @@ importAssetPairsRelayer () {
 	local _oracleSpread
 
 	while IFS="=" read -r assetPair info; do
+		assetPair="${assetPair/\/}"
 		assetInfo[$assetPair]="$info"
 	done < <(jq -r '.pairs | keys[] as $assetPair | "\($assetPair)=\(.[$assetPair] | .msgExpiration),\(.[$assetPair] | .oracle),\(.[$assetPair] | .oracleExpiration),\(.[$assetPair] | .oracleSpread)"' "$_config")
 
 	for assetPair in "${!assetInfo[@]}"; do
+		assetPair="${assetPair/\/}"
 		_msgExpiration=$(getMsgExpiration "$assetPair")
 		[[ "$_msgExpiration" =~ ^[1-9][0-9]*$ ]] || errors+=("Error - Asset Pair param $assetPair has invalid or missing msgExpiration field, must be positive integer.")
 		
