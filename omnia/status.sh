@@ -13,7 +13,7 @@ isEmpty () {
 
 #is message of type asset
 isAssetPair () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _msg="$2"
 	[ "$(echo "$_msg" | jq --arg _assetPair "$_assetPair" '.type == $_assetPair')" == "true" ] && echo true || echo false
 }
@@ -54,7 +54,7 @@ isExpired () {
 
 #is last scuttlebot message published expired
 isMsgExpired () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _msg="$2"
 	local _lastTime
 	local _expirationInterval
@@ -75,7 +75,7 @@ isMsgExpired () {
 
 #is last price update to Oracle expired
 isOracleExpired () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _lastTime
 	local _expirationInterval
 	_lastTime=$(pullOracleTime "$_assetPair")
@@ -118,7 +118,7 @@ isStale () {
 
 #is spread between existing Scuttlebot price greatner than spread limit
 isMsgStale () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _oldPriceMsg="$2"
 	local _newPrice="$3"
 	local _oldPrice
@@ -140,7 +140,7 @@ isMsgStale () {
 
 #is spread between existing Oracle price greater than spread limit
 isOracleStale () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _newPrice="$2"
 	local _oldPrice
 	local _spreadLimit
@@ -161,7 +161,7 @@ isOracleStale () {
 
 #is timestamp of message more recent than timestamp of last Oracle update
 isMsgNew () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _msg="$2"
 	local _oracleTime
 	local _msgTime
@@ -187,7 +187,7 @@ isMsgNew () {
 
 #are there enough feed messages to establish quorum
 isQuorum () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _numFeeds="$2"
 	local _quorum
 	#get min number of feeds required for quorum from Oracle contract

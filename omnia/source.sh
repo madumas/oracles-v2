@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 mapSetzer() {
-	local _assetPair=$1
+	local _assetPair=${1/\/}
 	local _source=$2
 	echo "$_source" "$(setzer price "$_assetPair" "$_source")"
 }
@@ -9,7 +9,8 @@ export -f mapSetzer
 
 #read price data of asset
 readSources () {
-	local _assetPair="${1,,}"
+	local _assetPair="${1/\/}"
+	_assetPair="${1,,}"
 	local _prices
 	local _price
 	local _source

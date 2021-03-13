@@ -59,7 +59,7 @@ pullLatestFeedMsgOfType () {
 
 #publish price  to scuttlebot
 broadcastPriceMsg () {
-    local _assetPair="$1"
+    local _assetPair="${1/\/}"
     local _price="$2"
     local _priceHex="$3"
     local _time="$4"

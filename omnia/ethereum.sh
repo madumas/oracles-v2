@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 pullOracleTime () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _address
 	_address=$(getOracleContract "$_assetPair")
 	if ! [[ "$_address" =~ ^(0x){1}[0-9a-fA-F]{40}$ ]]; then
@@ -23,7 +23,7 @@ pullOracleQuorum () {
 }
 
 pullOraclePrice () {
-	local _assetPair="$1"
+	local _assetPair="${1/\/}"
 	local _address
 	local _rawStorage
 	_address=$(getOracleContract "$_assetPair")
@@ -37,7 +37,7 @@ pullOraclePrice () {
 }
 
 pushOraclePrice () {
-    local _assetPair="$1"
+    local _assetPair="${1/\/}"
     local _oracleContract
     #TODO - use custom gas pricing strategy
     _oracleContract=$(getOracleContract "$_assetPair")
