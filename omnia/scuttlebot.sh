@@ -38,7 +38,7 @@ pullLatestFeedMsgOfType () {
 	ssb-server createUserStream \
 		--id "$_feed" --limit "$OMNIA_MSG_LIMIT" \
 		--reverse --fillCache 1 \
-	| jq -s --arg pair "$_assetPair" '
+	| jq -s -c --arg pair "$_assetPair" '
 		[.[] | select(.value.content.type == $pair)]
 		| max_by(.value.content.time)
 		| {
@@ -99,5 +99,5 @@ broadcastPriceMsg () {
     verbose "$_json"
     #publish msg to scuttlebot
     log "Publishing new price message..."
-    echo "$_json" | ssb-server publish .
+    echo "$_json" | ssb-server publish . | jq -c .
 }
