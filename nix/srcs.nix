@@ -30,9 +30,10 @@ rec {
   in nodepkgs' // shortNames;
 
   ssb-server = nodepkgs.ssb-server.override {
+    name = "patched-ssb-server";
     buildInputs = with pkgs; [ gnumake nodepkgs.node-gyp-build ];
     postInstall = ''
-      sed -i '/{ blockSize: 1024 \* 16, codec }/c\ var log = OffsetLog(path.join(dirname, 'log.offset'), { blockSize: 1024 * 16, codec, offsetCodec: 53 });' ./node_modules/ssb-db/minimal.js
+      sed -i 's/{ blockSize: 1024 \* 16, codec }/{ blockSize: 1024 * 16, codec, offsetCodec: 53 }/' ./node_modules/ssb-db/minimal.js
     '';
   };
 
