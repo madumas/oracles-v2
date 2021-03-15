@@ -30,11 +30,7 @@ rec {
   in nodepkgs' // shortNames;
 
   ssb-server = nodepkgs.ssb-server.override {
-    name = "patched-ssb-server";
     buildInputs = with pkgs; [ gnumake nodepkgs.node-gyp-build ];
-    postInstall = ''
-      sed -i 's/{ blockSize: 1024 \* 16, codec }/{ blockSize: 1024 * 16, codec, offsetCodec: 53 }/' ./node_modules/ssb-db/minimal.js
-    '';
   };
 
   setzer-mcd = makerpkgs.callPackage sources.setzer-mcd {};
