@@ -99,5 +99,5 @@ broadcastPriceMsg () {
     verbose "$_json"
     #publish msg to scuttlebot
     log "Publishing new price message..."
-    echo "$_json" | ssb-server publish .
+    echo "$_json" | ssb-server publish . | jq -c .
 }
