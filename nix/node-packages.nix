@@ -274,6 +274,15 @@ let
         sha1 = "125dd09de95d3ea30a378adbed021092179b03c9";
       };
     };
+    "async-write-2.1.0" = {
+      name = "async-write";
+      packageName = "async-write";
+      version = "2.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/async-write/-/async-write-2.1.0.tgz";
+        sha1 = "1e762817d849ce44bfac07925a42036787061b15";
+      };
+    };
     "atob-2.1.2" = {
       name = "atob";
       packageName = "atob";
@@ -1291,13 +1300,13 @@ let
         sha512 = "sRtejNHcWjJl0Fr+gsbybbgOKKj0sQYvv7rA787EbeFu1fMpmzjHuBW8fLBImSZeqDuR++TZU2n60mRrpAUR9g==";
       };
     };
-    "fastpriorityqueue-0.6.3" = {
+    "fastpriorityqueue-0.7.0" = {
       name = "fastpriorityqueue";
       packageName = "fastpriorityqueue";
-      version = "0.6.3";
+      version = "0.7.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fastpriorityqueue/-/fastpriorityqueue-0.6.3.tgz";
-        sha512 = "l4Whw9/MDkl/0XuqZEzGE/sw9T7dIxuUnxqq4ZJDLt8AE45j8wkx4/nBRZm50aQ9kN71NB9mwQzglLsvQGROsw==";
+        url = "https://registry.npmjs.org/fastpriorityqueue/-/fastpriorityqueue-0.7.0.tgz";
+        sha512 = "L5Je6LktYDK5aRJIAHO4NEyQXsihwe/+VEaI2qwyoxvuTPcyooLi9+MeLJnOzvEDwijxAXrrqqkV4cNgW55Rog==";
       };
     };
     "file-uri-to-path-1.0.0" = {
@@ -1363,13 +1372,13 @@ let
         sha1 = "ae049a714386bb83e342657a82924b70364a90d6";
       };
     };
-    "flumedb-2.1.8" = {
+    "flumedb-1.1.0" = {
       name = "flumedb";
       packageName = "flumedb";
-      version = "2.1.8";
+      version = "1.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/flumedb/-/flumedb-2.1.8.tgz";
-        sha512 = "MtBCZFjj9GuqOQP8Ld87FbXm8ztQyLkLeuiHuB5+aACFuVn1kunnCis75R03ujFZTqCFmkBwFz7E016b3DB0zA==";
+        url = "https://registry.npmjs.org/flumedb/-/flumedb-1.1.0.tgz";
+        sha512 = "Bwol+72GU5z2DxZlnaxUA9A8qaRcQcdTprmRcgfqn2ldn147ByVh9Zyp90hVGPlo/oEN/yjOBUXcNkK3SYjbgA==";
       };
     };
     "flumelog-offset-3.4.4" = {
@@ -2299,13 +2308,13 @@ let
         sha1 = "4e431e92b11a9731636aa1f9c8d1ccbcfdab78df";
       };
     };
-    "jitdb-2.3.3" = {
+    "jitdb-2.3.4" = {
       name = "jitdb";
       packageName = "jitdb";
-      version = "2.3.3";
+      version = "2.3.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/jitdb/-/jitdb-2.3.3.tgz";
-        sha512 = "wSB+iNzPm/Qcp1lKg8olKL0zeZdAhDVXLpWLKLWtqWN/vpHeu7vKmYxClsxhmV4YhZ/Hjzzi0oXBY8hVqKHQTA==";
+        url = "https://registry.npmjs.org/jitdb/-/jitdb-2.3.4.tgz";
+        sha512 = "KK20bNiuzIekY7KzH4DvKDMGOu4yGAfiPFLE6GbFZUWurXOQJAbfjvbqKmNHOTE6FA5o8pPg2dz8OvJyjByWEQ==";
       };
     };
     "js-yaml-3.14.1" = {
@@ -2549,15 +2558,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz";
         sha512 = "v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==";
-      };
-    };
-    "lodash.clonedeep-4.5.0" = {
-      name = "lodash.clonedeep";
-      packageName = "lodash.clonedeep";
-      version = "4.5.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz";
-        sha1 = "e23f3f9c4f8fbdde872529c1071857a086e5ccef";
       };
     };
     "lodash.debounce-4.0.8" = {
@@ -3226,15 +3226,6 @@ let
         sha1 = "cb236106341536f0dac4815e06708221cad7fb5e";
       };
     };
-    "obz-1.0.2" = {
-      name = "obz";
-      packageName = "obz";
-      version = "1.0.2";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/obz/-/obz-1.0.2.tgz";
-        sha512 = "c+EtVwT2IpXz5we2mR40aPLJ1s0eNOsxYeaYbaHhmsY6kWKo3IRkpwpBU5ck0aHfqfKUUEiKabC6rzsrG/hSHw==";
-      };
-    };
     "obz-1.0.3" = {
       name = "obz";
       packageName = "obz";
@@ -3593,15 +3584,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/pull-abortable/-/pull-abortable-4.0.0.tgz";
         sha1 = "7017a984c3b834de77bac38c10b776f22dfc1843";
-      };
-    };
-    "pull-abortable-4.1.1" = {
-      name = "pull-abortable";
-      packageName = "pull-abortable";
-      version = "4.1.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/pull-abortable/-/pull-abortable-4.1.1.tgz";
-        sha1 = "b3ad5aefb4116b25916d26db89393ac98d0dcea1";
       };
     };
     "pull-async-1.0.0" = {
@@ -4576,13 +4558,13 @@ let
         sha512 = "mbKkMdQKsjX4BAL4bRYTj21edOf8cN7XHdYUJEe+Zn99hVEYcMvKPct1IqNe7+AZPirn8BCDOQBHQZknqmKlZQ==";
       };
     };
-    "socks-2.5.1" = {
+    "socks-2.6.0" = {
       name = "socks";
       packageName = "socks";
-      version = "2.5.1";
+      version = "2.6.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/socks/-/socks-2.5.1.tgz";
-        sha512 = "oZCsJJxapULAYJaEYBSzMcz8m3jqgGrHaGhkmU/o/PQfFWYWxkAaA0UMGImb6s6tEXfKi959X6VJjMMQ3P6TTQ==";
+        url = "https://registry.npmjs.org/socks/-/socks-2.6.0.tgz";
+        sha512 = "mNmr9owlinMplev0Wd7UHFlqI4ofnBnNzFuzrm63PPaHgbkqCFe4T5LzwKmtQ/f2tX0NTpcdVLyD/FHxFBstYw==";
       };
     };
     "sodium-browserify-1.3.0" = {
@@ -4711,22 +4693,22 @@ let
         sha512 = "DyCrGIsl01GkdHreAkkaDUorV7SAgRSqKn/htg4ZwbvH6g0NAdOi84x/8ehzDuojPev78hbkWjZXgIqi+/Jo0g==";
       };
     };
-    "ssb-db-20.4.0" = {
+    "ssb-db-19.2.0" = {
       name = "ssb-db";
       packageName = "ssb-db";
-      version = "20.4.0";
+      version = "19.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ssb-db/-/ssb-db-20.4.0.tgz";
-        sha512 = "vsI7w+NZHxBdCVq428U+X0s1+E8Ro8EJ35MwfEpezBLtXlB+X2ej91InukblowiW5rdWD3y4mb01RobhhgTXSw==";
+        url = "https://registry.npmjs.org/ssb-db/-/ssb-db-19.2.0.tgz";
+        sha512 = "pJAFizB6OcuJLX4RJJuU9HWyPwM2CqLi/vs08lhVIR3TGxacxpavvK5LzbxT+Y3iWkBchOTKS5hHCigA5aaung==";
       };
     };
-    "ssb-db2-1.18.3" = {
+    "ssb-db2-1.18.6" = {
       name = "ssb-db2";
       packageName = "ssb-db2";
-      version = "1.18.3";
+      version = "1.18.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ssb-db2/-/ssb-db2-1.18.3.tgz";
-        sha512 = "A5QHs7WkZJky/aE6Joewy3bBjx4zJThbqW9UtRgvnF5OeqQB7JuIUKF24kwWLP7HOQv43PpVjlhHNSZPl67Oxw==";
+        url = "https://registry.npmjs.org/ssb-db2/-/ssb-db2-1.18.6.tgz";
+        sha512 = "Z6dkEhpwJbKWV5v28s2sFj2Nu8FAF/ANX24lrTlpr1ltLAb4Us1mtp1y6cZQhlXlmy+ILxDuhs51/hhbjKfpmA==";
       };
     };
     "ssb-ebt-5.6.7" = {
@@ -4855,22 +4837,13 @@ let
         sha512 = "6yI5XBpBHkwFdAELpKwlf1C1V32Z0/AKEJYsoU7lk+Eh88blv8LKydo4a1DnjMiPy4ywn4lRU5oayQaPE5MRtQ==";
       };
     };
-    "ssb-plugins-1.0.4" = {
+    "ssb-plugins-1.0.0" = {
       name = "ssb-plugins";
       packageName = "ssb-plugins";
-      version = "1.0.4";
+      version = "1.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ssb-plugins/-/ssb-plugins-1.0.4.tgz";
-        sha512 = "D48CcHdlkQwkFnaBmEQFt/rPDqHZ252JJ/dqAuFvdpFTnZ5ujYmdbIldOdBGcTm3Bn7GrRGmAGctOKwH/3X0dQ==";
-      };
-    };
-    "ssb-private1-1.0.1" = {
-      name = "ssb-private1";
-      packageName = "ssb-private1";
-      version = "1.0.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/ssb-private1/-/ssb-private1-1.0.1.tgz";
-        sha512 = "x69YHNhjxCrknkK7XbEJyk2P0P3p52t6NF74I8ObHIrBdWnyRrO6iUH8K5b8CkaHawM4giXdZG5cyrOPzPN/Fg==";
+        url = "https://registry.npmjs.org/ssb-plugins/-/ssb-plugins-1.0.0.tgz";
+        sha512 = "eM8vid+K8MhwZwzk/CDUhSNhUoS6wYgq9clJrrKaP0/Otdd3zZzcBQw54Xvm0olMcOgpTSlY3m2rT4iqjZPIBw==";
       };
     };
     "ssb-query-2.4.5" = {
@@ -5623,13 +5596,13 @@ let
   };
 in
 {
-  "ssb-server-16.0.1" = nodeEnv.buildNodePackage {
+  "ssb-server-15.3.0" = nodeEnv.buildNodePackage {
     name = "ssb-server";
     packageName = "ssb-server";
-    version = "16.0.1";
+    version = "15.3.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/ssb-server/-/ssb-server-16.0.1.tgz";
-      sha512 = "cast7wQRxqUSiRVyFoaTtymeukwSh5nlfDj5ShHmdnh0qmfi4uQnvPuBA5BBgC3WEtI/ozgNjAc1/vqJFgILig==";
+      url = "https://registry.npmjs.org/ssb-server/-/ssb-server-15.3.0.tgz";
+      sha512 = "+KXfMBecoFFAo0C4FTfSsH2ZXtrL2aQDXgVlQ0NrYdNLHW2TEnibV0hG3yq3hOlAEUQmrwVHZATfVToO825gxA==";
     };
     dependencies = [
       (sources."@sammacbeth/random-access-idb-mutable-file-0.1.1" // {
@@ -5663,13 +5636,9 @@ in
       })
       sources."async-each-1.0.3"
       sources."async-single-1.0.5"
+      sources."async-write-2.1.0"
       sources."atob-2.1.2"
-      (sources."atomic-file-2.1.1" // {
-        dependencies = [
-          sources."flumecodec-0.0.1"
-          sources."level-codec-6.2.0"
-        ];
-      })
+      sources."atomic-file-1.1.5"
       sources."atomically-1.7.0"
       sources."atomically-universal-0.1.1"
       sources."attach-ware-1.1.1"
@@ -5831,7 +5800,7 @@ in
       sources."extend.js-0.0.2"
       sources."extglob-0.3.2"
       sources."fastintcompression-0.0.4"
-      sources."fastpriorityqueue-0.6.3"
+      sources."fastpriorityqueue-0.7.0"
       sources."file-uri-to-path-1.0.0"
       sources."filename-regex-2.0.1"
       sources."fill-range-2.2.4"
@@ -5841,39 +5810,37 @@ in
           sources."level-codec-6.2.0"
         ];
       })
-      (sources."flumedb-2.1.8" // {
-        dependencies = [
-          sources."pull-abortable-4.1.1"
-        ];
-      })
+      sources."flumedb-1.1.0"
       sources."flumelog-offset-3.4.4"
-      (sources."flumeview-hashtable-1.1.1" // {
-        dependencies = [
-          sources."atomic-file-1.1.5"
-        ];
-      })
-      (sources."flumeview-level-4.0.4" // {
-        dependencies = [
-          sources."abstract-leveldown-6.2.3"
-          sources."level-6.0.1"
-          sources."level-js-5.0.2"
-          sources."mkdirp-1.0.4"
-        ];
-      })
+      sources."flumeview-hashtable-1.1.1"
+      sources."flumeview-level-3.0.14"
       (sources."flumeview-links-1.0.1" // {
         dependencies = [
           sources."deep-equal-2.0.5"
-          sources."flumeview-level-3.0.14"
           sources."isarray-2.0.5"
           sources."map-filter-reduce-3.2.2"
         ];
       })
       (sources."flumeview-query-8.0.0" // {
         dependencies = [
+          sources."abstract-leveldown-6.2.3"
+          sources."flumeview-level-4.0.4"
+          sources."level-6.0.1"
+          sources."level-js-5.0.2"
           sources."map-filter-reduce-3.2.2"
+          sources."mkdirp-1.0.4"
         ];
       })
-      sources."flumeview-reduce-1.4.0"
+      (sources."flumeview-reduce-1.4.0" // {
+        dependencies = [
+          (sources."atomic-file-2.1.1" // {
+            dependencies = [
+              sources."flumecodec-0.0.1"
+            ];
+          })
+          sources."level-codec-6.2.0"
+        ];
+      })
       sources."for-each-0.3.3"
       sources."for-in-1.0.2"
       sources."for-own-0.1.5"
@@ -5987,10 +5954,9 @@ in
       sources."isarray-1.0.0"
       sources."isexe-2.0.0"
       sources."isobject-2.1.0"
-      (sources."jitdb-2.3.3" // {
+      (sources."jitdb-2.3.4" // {
         dependencies = [
           sources."mkdirp-1.0.4"
-          sources."obz-1.0.3"
           sources."push-stream-11.0.0"
           sources."typedarray-to-buffer-4.0.0"
         ];
@@ -6023,7 +5989,6 @@ in
       sources."libsodium-0.7.9"
       sources."libsodium-wrappers-0.7.9"
       sources."locate-path-5.0.0"
-      sources."lodash.clonedeep-4.5.0"
       sources."lodash.debounce-4.0.8"
       sources."lodash.get-4.4.2"
       sources."log-symbols-1.0.2"
@@ -6132,7 +6097,7 @@ in
       sources."observ-0.2.0"
       sources."observ-debounce-1.1.1"
       sources."obv-0.0.1"
-      sources."obz-1.0.2"
+      sources."obz-1.0.3"
       sources."on-change-network-0.0.2"
       sources."on-wakeup-1.0.1"
       sources."once-1.4.0"
@@ -6400,7 +6365,7 @@ in
         ];
       })
       sources."snapdragon-util-3.0.1"
-      sources."socks-2.5.1"
+      sources."socks-2.6.0"
       sources."sodium-browserify-1.3.0"
       (sources."sodium-browserify-tweetnacl-0.2.6" // {
         dependencies = [
@@ -6419,14 +6384,8 @@ in
       sources."ssb-caps-1.1.0"
       sources."ssb-client-4.9.0"
       sources."ssb-config-3.4.5"
-      (sources."ssb-db-20.4.0" // {
-        dependencies = [
-          sources."glob-7.1.6"
-          sources."mkdirp-1.0.4"
-          sources."rimraf-3.0.2"
-        ];
-      })
-      (sources."ssb-db2-1.18.3" // {
+      sources."ssb-db-19.2.0"
+      (sources."ssb-db2-1.18.6" // {
         dependencies = [
           sources."abstract-leveldown-6.2.3"
           (sources."flumecodec-0.0.1" // {
@@ -6438,7 +6397,6 @@ in
           sources."level-6.0.1"
           sources."level-js-5.0.2"
           sources."mkdirp-1.0.4"
-          sources."obz-1.0.3"
           sources."push-stream-11.0.0"
           sources."rimraf-3.0.2"
           (sources."ssb-keys-8.1.0" // {
@@ -6456,11 +6414,7 @@ in
           sources."level-codec-6.2.0"
         ];
       })
-      (sources."ssb-gossip-1.1.1" // {
-        dependencies = [
-          sources."atomic-file-1.1.5"
-        ];
-      })
+      sources."ssb-gossip-1.1.1"
       (sources."ssb-invite-2.1.6" // {
         dependencies = [
           sources."abstract-leveldown-6.2.3"
@@ -6482,8 +6436,7 @@ in
           sources."level-codec-6.2.0"
         ];
       })
-      sources."ssb-plugins-1.0.4"
-      sources."ssb-private1-1.0.1"
+      sources."ssb-plugins-1.0.0"
       sources."ssb-query-2.4.5"
       sources."ssb-ref-2.14.3"
       sources."ssb-replicate-1.3.2"
