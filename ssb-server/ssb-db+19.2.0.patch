@@ -14,7 +14,7 @@ index 8825682..97d32cd 100644
 -      return b
 -    })
 -    )
-+    .use('keys', ViewLevel(4, (msg) => [ msg.key ]) )
++    .use('keys', ViewLevel(3, (msg) => [ msg.key ]) )
      .use('clock', require('./indexes/clock')())
 
    db.progress = {}
