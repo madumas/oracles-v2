@@ -1,5 +1,5 @@
 let
-  inherit (builtins) map filter listToAttrs attrValues isString currentSystem;
+  inherit (builtins) map filter listToAttrs attrValues attrNames isString currentSystem;
   inherit (import sources.nixpkgs {}) pkgs;
   inherit (pkgs) fetchgit;
   inherit (pkgs.lib.strings) removePrefix;
@@ -12,6 +12,7 @@ let
       else x.pname or (parse x.name);
 
   sources = import ./sources.nix;
+  ssb-patches = ../ssb-server;
 in
 
 rec {
@@ -29,11 +30,11 @@ rec {
     );
   in nodepkgs' // shortNames;
 
-  ssb-server = nodepkgs.ssb-server.override {
+  ssb-server = builtins.trace (attrNames nodepkgs) nodepkgs.ssb-server.override {
     name = "patched-ssb-server";
-    buildInputs = with pkgs; [ gnumake nodepkgs.node-gyp-build ];
+    buildInputs = with pkgs; [ gnumake nodepkgs.node-gyp-build git ];
     postInstall = ''
-      sed -i "s|{ blockSize: 1024 \* 16, codec }|{ blockSize: 1024 * 16, codec, offsetCodec: require('flumelog-offset/frame/offset-codecs')[53] }|" ./node_modules/ssb-db/minimal.js
+      git apply --verbose ${ssb-patches}/ssb-db+19.2.0.patch
     '';
   };
 

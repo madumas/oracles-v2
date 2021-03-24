@@ -11,6 +11,7 @@ pkgs.mkShell rec {
     git niv
     nodePackages.node2nix
     nodePackages.semver
+    srcs.ssb-server
   ]);
 
   VERSION_FILE = toString ./omnia/version;
