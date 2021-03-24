@@ -30,7 +30,7 @@ rec {
     );
   in nodepkgs' // shortNames;
 
-  ssb-server = builtins.trace (attrNames nodepkgs) nodepkgs.ssb-server.override {
+  ssb-server = nodepkgs.ssb-server.override {
     name = "patched-ssb-server";
     buildInputs = with pkgs; [ gnumake nodepkgs.node-gyp-build git ];
     postInstall = ''
